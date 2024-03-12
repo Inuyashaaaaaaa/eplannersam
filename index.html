@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kD9VyMO2ilPTp30H/2u2pMHvBb4zvnA6L3RwP62rieyvGfTTRaM25BZywU2BJ4aMJg==" crossorigin="" referrerpolicy="no-referrer" />
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAiWzqdf4u6BQvAVzdqC43NHJjV/HSdGvuD7KAjumo2bJW6ApzHvMvtGXlhlVft4vVcf/DGw==" crossorigin=""></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Event Planner</title>
+</head>
+<body style="color: white; background-color: #1d2630">
+  <div class="container mt-5">
+    <div class="text-center">
+      <h1 class="display-5 mb-5"><strong>Event Planner</strong></h1>
+    </div>
+    <div class="main row justify-content center">
+      <form id="event-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <br>
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time">
+        <br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location">
+        <br>
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes"></textarea>
+        <br>
+        <button type="submit">Create Event</button>
+      </form>
+      <div class="col-12 mb-3">
+        <label for="search-input" class="form-label">Search Events:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="search-input" placeholder="Enter event name...">
+          <button class="btn btn-primary" type="button" id="search-button">Search</button>
+        </div>
+      </div>
+      <div>
+   
+        <div id="map"></div>
+      </div>
+      <div class="col-10 mt-5">
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th>Event Name</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Location</th>
+
+              <th>Notes</th>
+              <th>Actions</th>
+
+            </tr>
+          </thead>
+          <tbody class="event-list"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="script3.js"></script>
+  
+</body>
+</html>
